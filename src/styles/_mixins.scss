@@ -1,0 +1,38 @@
+@import "./variables";
+
+// Breakpoints
+@mixin sMaxBreakPoint {
+  @media (max-width: #{$screen-s}) {
+    @content;
+  }
+}
+
+@mixin smMaxBreakPoint {
+  @media (max-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin mdMaxBreakPoint {
+  @media (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin lgMaxBreakPoint {
+  @media (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin xlMaxBreakPoint {
+  @media (max-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin xxlMaxBreakPoint {
+  @media (max-width: #{$screen-xxl}) {
+    @content;
+  }
+}

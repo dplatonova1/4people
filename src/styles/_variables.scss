@@ -1,7 +1,7 @@
 // Screen sizes
 $screen-s: 320px;
-$screen-sm: 576px;
-$screen-md: 768px;
+$screen-sm: 768px;
+$screen-md: 822px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
 $screen-xxl: 1300px;
@@ -13,7 +13,8 @@ $primary-color-hover: #42a9ed;
 $text-color-dark: #000000;
 $text-color-dark-secondary: #2a2b30;
 $text-color-light: #ffffff;
+$bg-color-dark-opacity: rgba(16, 16, 29, 0.9);
 $bg-color-dark: #10101d;
 
-//Misc
-$content-width: 61%;
+//Transitions
+$transition-props: all 0.3s ease-in-out;

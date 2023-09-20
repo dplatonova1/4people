@@ -1,0 +1,42 @@
+@import "../../styles/_variables";
+@import "../../styles/_mixins";
+
+.lead {
+  width: 100%;
+  background-image: url("../icons/lead_img.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24em;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__content {
+  }
+
+  &__description {
+  }
+
+  &__list {
+    list-style: "-";
+  }
+
+  &__item {
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
