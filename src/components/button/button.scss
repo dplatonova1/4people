@@ -1,0 +1,44 @@
+@import "../../styles/_variables";
+@import "../../styles/_mixins";
+@import "../../styles/_typography";
+
+.button {
+  padding: 0.938em 0.625em;
+  border-radius: 4px;
+  text-transform: uppercase;
+  min-width: 11.438em;
+  font-family: inherit;
+  font-weight: 400;
+  @include smMaxBreakPoint {
+    padding: 0.625em 0.313em;
+    min-width: 9em;
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:not(:last-child) {
+    margin-right: 1.875em;
+  }
+
+  &--primary {
+    background-color: $primary-color;
+    border: 1px solid $text-color-light;
+    color: $text-color-light;
+    &:hover {
+      background-color: $primary-color-hover;
+      transition: $transition-props;
+    }
+  }
+  &--secondary {
+    background-color: $text-color-light;
+    border: 1px solid $text-color-dark;
+    color: $text-color-dark;
+    &:hover {
+      background-color: $light-color-hover;
+      transition: $transition-props;
+    }
+  }
+}

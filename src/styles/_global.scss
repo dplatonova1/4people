@@ -1,5 +1,6 @@
 @import "./_variables";
 @import "./_mixins";
+@import "./_typography";
 
 * {
   box-sizing: border-box;
@@ -9,11 +10,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Lato Regular", sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   background-color: $text-color-light;
-  box-sizing: border-box;
   height: 100vh;
   min-height: 100%;
   font-size: 16px;

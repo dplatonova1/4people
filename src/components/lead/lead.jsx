@@ -7,7 +7,9 @@ export const Lead = () => {
     <div className="lead">
       <div className="lead__wrapper">
         <h1 className="lead__title">
-          Lorem ipsum dolor sit amet consectetur adipiscing
+          <span className="lead__title--highlighted">Lorem ipsum</span> dolor
+          sit ametconsectetur{" "}
+          <span className="lead__title--highlighted">adipiscing</span>
         </h1>
         <div className="lead__content">
           <p className="lead__description">
