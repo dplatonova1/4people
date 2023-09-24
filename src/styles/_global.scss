@@ -7,6 +7,8 @@
 }
 
 body {
+  max-width: 100%;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: "Lato Regular", sans-serif;
@@ -15,8 +17,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   background-color: $text-color-light;
-  height: 100vh;
-  min-height: 100%;
   font-size: 16px;
   @include lgMaxBreakPoint {
     font-size: 14px;

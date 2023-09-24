@@ -15,6 +15,7 @@ export const Footer = () => {
         </p>
         <span className="footer__divider" />
         <div className="footer__payments">
+          <p className="footer__subtitle">Платёжные системы</p>
           <ul className="footer__list">
             <li className="footer__item">
               <Qiwi className="footer__icon" />
@@ -32,6 +33,7 @@ export const Footer = () => {
         </div>
         <span className="footer__divider" />
         <div className="footer__contacts">
+          <p className="footer__subtitle">Контакты</p>
           <ul className="footer__list">
             <li className="footer__item">
               <a href="mailto:info@ipsum228.com" className="footer__link">
@@ -48,9 +50,6 @@ export const Footer = () => {
                 <VK className="footer__icon" />
                 Мы вконтакте
               </a>
-            </li>
-            <li className="footer__item">
-              <a href="" className="footer__link"></a>
             </li>
           </ul>
         </div>

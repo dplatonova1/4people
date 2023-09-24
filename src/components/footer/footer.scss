@@ -3,48 +3,50 @@
 
 .footer {
   width: 100vw;
-  height: 5em;
+  min-height: 5em;
   display: flex;
   align-items: center;
   background-color: $text-color-dark-secondary;
   color: $text-color-light;
 
   @include xxlMaxBreakPoint {
-    height: 6em;
+    min-height: 6em;
   }
   @include lgMaxBreakPoint {
-    height: 9em;
+    min-height: 9em;
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 24em;
+    padding: 0.5em 24em;
     width: 100%;
     height: 100%;
-    font-size: 0.813em;
 
     @include xxlMaxBreakPoint {
-      padding: 0 14em;
+      padding: 0.4em 14em;
+      align-items: flex-start;
     }
     @include xlMaxBreakPoint {
-      padding: 0 12em;
+      padding: 0.2em 12em;
     }
     @include lgMaxBreakPoint {
-      padding: 0 10em;
+      padding: 0.2em 10em;
     }
     @include mdMaxBreakPoint {
-      padding: 0 8em;
+      padding: 0.2em 8em;
     }
     @include smMaxBreakPoint {
-      padding: 0 1em;
+      padding: 0.2em 1em;
     }
   }
 
   &__payments,
   &__contacts {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   &__divider {
@@ -54,6 +56,8 @@
     border-left: 1px solid $text-color-light;
     @include xxlMaxBreakPoint {
       margin: 0 1em;
+      align-self: center;
+      height: 3em;
     }
   }
 
@@ -64,6 +68,7 @@
     list-style: none;
     margin: 0;
     padding-inline-start: 0;
+    font-size: 0.813em;
     @include xxlMaxBreakPoint {
       flex-direction: column;
       justify-content: center;
@@ -81,13 +86,10 @@
     }
     @include xxlMaxBreakPoint {
       margin-bottom: 0.5em;
-      margin-left: 30%;
     }
     @include xlMaxBreakPoint {
-      margin-left: 15%;
     }
     @include sMaxBreakPoint {
-      margin-left: 5%;
     }
   }
 
@@ -106,6 +108,19 @@
       color: $primary-color;
       cursor: pointer;
       transition: $transition-props;
+    }
+  }
+
+  &__subtitle {
+    display: none;
+    font-weight: bold;
+    margin-bottom: 1em;
+    font-size: 0.813em;
+
+    @include xxlMaxBreakPoint {
+      display: flex;
+      margin-bottom: 0.5em;
+      flex-shrink: 0;
     }
   }
 }
