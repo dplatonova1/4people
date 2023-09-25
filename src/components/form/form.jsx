@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import "./form.scss";
 import { Button } from "../button/button";
 import { ReactComponent as File } from "../icons/fileicon.svg";
+import { ReactComponent as Arrow } from "../icons/arrow.svg";
+import classNames from "classnames";
 
 export const Form = () => {
   const {
@@ -10,36 +12,97 @@ export const Form = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => console.log({ ...data, type: type });
   console.log(errors);
   const [rangeValue, setRangeValue] = useState(0);
+  const [type, setType] = useState("Выберите тип системы");
+  const [open, setIsOpen] = useState(false);
+  const arrowCN = classNames(open ? "form__arrow--open" : "form__arrow");
+  const buttonCN = classNames(
+    open
+      ? "form__field form__selectbox-button form__selectbox-button--open"
+      : "form__field form__selectbox-button"
+  );
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="form">
-      <select
-        {...register("type", { required: true })}
-        className="form__selectbox form__field"
-        defaultValue="default"
-      >
-        <option value="default" disabled>
-          Выберите тип системы
-        </option>
-        <option className="form__selectbox-item" value="Sed ut perspiciatis">
-          Sed ut perspiciatis
-        </option>
-        <option className="form__selectbox-item" value="Nemo enim ipsam">
-          Nemo enim ipsam
-        </option>
-        <option className="form__selectbox-item" value="Et harum quidem">
-          Et harum quidem
-        </option>
-        <option className="form__selectbox-item" value="Temporibus autem">
-          Temporibus autem
-        </option>
-        <option className="form__selectbox-item" value="Itaque earum rerum">
-          Itaque earum rerum
-        </option>
-      </select>
+      <div className="form__selectbox">
+        <button
+          id="selectbox"
+          className={buttonCN}
+          onClick={() => setIsOpen(!open)}
+          aria-haspopup="true"
+          aria-expanded={open ? "true" : "false"}
+          aria-label="Open types popup"
+        >
+          {type}
+          <Arrow className={arrowCN} />
+        </button>
+        {open && (
+          <ul
+            className="form__selectbox-input"
+            role="menu"
+            onKeyDown={() => setIsOpen(true)}
+          >
+            <li
+              className="form__selectbox-item"
+              role="menuitem"
+              tabIndex="0"
+              onClick={(e) => {
+                setType(e.currentTarget.textContent);
+                setIsOpen(false);
+              }}
+            >
+              Sed ut perspiciatis
+            </li>
+            <li
+              className="form__selectbox-item"
+              role="menuitem"
+              tabIndex="0"
+              onClick={(e) => {
+                setType(e.currentTarget.textContent);
+                setIsOpen(false);
+              }}
+            >
+              Nemo enim ipsam
+            </li>
+            <li
+              className="form__selectbox-item"
+              role="menuitem"
+              tabIndex="0"
+              onClick={(e) => {
+                setType(e.currentTarget.textContent);
+                setIsOpen(false);
+              }}
+            >
+              Et harum quidem
+            </li>
+            <li
+              className="form__selectbox-item"
+              role="menuitem"
+              tabIndex="0"
+              onClick={(e) => {
+                setType(e.currentTarget.textContent);
+                setIsOpen(false);
+              }}
+            >
+              Temporibus autem
+            </li>
+            <li
+              className="form__selectbox-item"
+              role="menuitem"
+              tabIndex="0"
+              onClick={(e) => {
+                setType(e.currentTarget.textContent);
+                setIsOpen(false);
+              }}
+            >
+              Itaque earum rerum
+            </li>
+          </ul>
+        )}
+      </div>
+
       <input
         name="email"
         type="email"

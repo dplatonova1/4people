@@ -30,21 +30,18 @@ export const Content = () => {
               <Percent />
             </div>
             <div className="content__text">Сonsecteturadipiscing elit</div>
-            <span className="content__dots" />
           </div>
           <div className="content__step">
             <div className="content__image">
               <Contract />
             </div>
             <div className="content__text">Sed do eiusmod tempor</div>
-            <span className="content__dots" />
           </div>
           <div className="content__step">
             <div className="content__image">
               <Mail />
             </div>
             <div className="content__text">Esse cillum dolore eu fugiat</div>
-            <span className="content__dots" />
           </div>
           <div className="content__step">
             <div className="content__image">
@@ -53,15 +50,8 @@ export const Content = () => {
             <div className="content__text">
               Excepteur sint occaecat cupidatat non proident
             </div>
-            <span className="content__dots" />
           </div>
-          <div className="content__step">
-            <div className="content__image">
-              <Lens />
-            </div>
-            <div className="content__text">img</div>
-            <span className="content__dots" />
-          </div>
+          <span className="content__dots" />
         </div>
         <Form />
       </div>

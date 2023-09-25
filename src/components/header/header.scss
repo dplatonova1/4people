@@ -17,6 +17,10 @@
     padding: 0 24em;
     width: 100%;
     position: relative;
+
+    @include xxxlMaxBreakPoint {
+      padding: 0 18em;
+    }
     @include xxlMaxBreakPoint {
       padding: 0 14em;
     }

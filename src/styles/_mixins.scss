@@ -1,6 +1,12 @@
 @import "./variables";
 
 // Breakpoints
+@mixin xsMaxBreakPoint {
+  @media (max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
 @mixin sMaxBreakPoint {
   @media (max-width: #{$screen-s}) {
     @content;
@@ -33,6 +39,12 @@
 
 @mixin xxlMaxBreakPoint {
   @media (max-width: #{$screen-xxl}) {
+    @content;
+  }
+}
+
+@mixin xxxlMaxBreakPoint {
+  @media (max-width: #{$screen-xxxl}) {
     @content;
   }
 }
