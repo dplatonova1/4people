@@ -13,7 +13,6 @@ export const Form = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log({ ...data, type: type });
-  console.log(errors);
   const [rangeValue, setRangeValue] = useState(0);
   const [type, setType] = useState("Выберите тип системы");
   const [open, setIsOpen] = useState(false);
@@ -102,21 +101,30 @@ export const Form = () => {
           </ul>
         )}
       </div>
-
-      <input
-        name="email"
-        type="email"
-        placeholder="Ваш Email"
-        {...register("email", {})}
-        className="form__field"
-      />
-      <input
-        name="name"
-        type="text"
-        placeholder="Ваше имя"
-        {...register("name", {})}
-        className="form__field"
-      />
+      <div className="form__input">
+        <input
+          name="email"
+          type="email"
+          placeholder="Ваш Email"
+          {...register("email", { required: true })}
+          className="form__field"
+        />
+        {errors.email && (
+          <p className="form__error">"Пожалуйста, заполните это поле"</p>
+        )}
+      </div>
+      <div className="form__input">
+        <input
+          name="name"
+          type="text"
+          placeholder="Ваше имя"
+          {...register("name", { required: true })}
+          className="form__field"
+        />
+        {errors.name && (
+          <p className="form__error">"Пожалуйста, заполните это поле"</p>
+        )}
+      </div>
 
       <div className="form__range">
         <div className="form__range-wrap">
@@ -130,7 +138,7 @@ export const Form = () => {
           name="range"
           type="range"
           placeholder="Range"
-          {...register("range", {})}
+          {...register("range")}
           className="form__range-input"
           defaultValue={0}
           onChange={(e) => {
