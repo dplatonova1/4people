@@ -63,6 +63,12 @@
       z-index: 1;
       transform: translateZ(5px);
     }
+    &::-moz-range-track {
+      height: 6px;
+      background-color: $bg-color-light-opacity;
+      border-radius: 3px;
+      border: 1px solid $text-color-light;
+    }
   }
 
   &__range-wrap {
