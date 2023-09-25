@@ -138,7 +138,7 @@ export const Form = () => {
           name="range"
           type="range"
           placeholder="Range"
-          {...register("range")}
+          {...register("range", {})}
           className="form__range-input"
           defaultValue={0}
           onChange={(e) => {

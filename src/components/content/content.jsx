@@ -11,7 +11,7 @@ import { Parallax } from "react-scroll-parallax";
 export const Content = () => {
   return (
     <div className="content">
-      <Parallax speed={20}>
+      <Parallax speed={20} style={{ width: "100%" }}>
         <div className="content__wrapper">
           <h2 className="content__title">
             Оформление{" "}
