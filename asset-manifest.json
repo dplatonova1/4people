@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/4people/static/css/main.65136d86.css",
-    "main.js": "/4people/static/js/main.882ac7b4.js",
+    "main.css": "/4people/static/css/main.39b05613.css",
+    "main.js": "/4people/static/js/main.4ded4a79.js",
     "static/media/lato-heavy.eot": "/4people/static/media/lato-heavy.958f6aa1551c8b099f36.eot",
     "static/media/lato-heavy.ttf": "/4people/static/media/lato-heavy.5c1cd245a04017a84864.ttf",
     "static/media/lato-bold.eot": "/4people/static/media/lato-bold.f880567c9f7ff0877ccc.eot",
@@ -35,11 +35,11 @@
     "static/media/arrow.svg": "/4people/static/media/arrow.58d5add1ab6bffaf21b4aeb7ff61e85d.svg",
     "index.html": "/4people/index.html",
     "static/media/dots.svg": "/4people/static/media/dots.5e9cf40e03ab244d0457.svg",
-    "main.65136d86.css.map": "/4people/static/css/main.65136d86.css.map",
-    "main.882ac7b4.js.map": "/4people/static/js/main.882ac7b4.js.map"
+    "main.39b05613.css.map": "/4people/static/css/main.39b05613.css.map",
+    "main.4ded4a79.js.map": "/4people/static/js/main.4ded4a79.js.map"
   },
   "entrypoints": [
-    "static/css/main.65136d86.css",
-    "static/js/main.882ac7b4.js"
+    "static/css/main.39b05613.css",
+    "static/js/main.4ded4a79.js"
   ]
 }
