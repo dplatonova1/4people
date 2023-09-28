@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "../button/button";
 import "./lead.scss";
-import { Parallax } from "react-scroll-parallax";
 
 export const Lead = () => {
   return (
