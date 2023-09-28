@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: max-content;
-  gap: 1.875em;
+  gap: 1.875rem;
   @include xlMaxBreakPoint {
     grid-template-columns: none;
     grid-auto-flow: dense;
@@ -97,7 +97,7 @@
     border: none;
     outline: 0;
     padding: 10px 12px;
-    font-size: 1.125em;
+    font-size: 1.125rem;
     font-family: inherit;
     font-weight: 400;
     max-height: 48px;
@@ -115,7 +115,7 @@
     background-color: $text-color-light;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 0.95em;
+    font-size: 0.95rem;
     &:hover {
       cursor: pointer;
     }
@@ -143,9 +143,9 @@
     max-height: 180px;
     padding: 5px 0;
     overflow-y: scroll;
-    width: 22.7em;
+    width: 22.7rem;
     position: absolute;
-    top: 1.5em;
+    top: 1.5rem;
     z-index: 2;
 
     &::-webkit-scrollbar {
@@ -169,7 +169,7 @@
   &__selectbox-item {
     color: $text-color-light;
     padding: 10px 12px;
-    font-size: 1.125em;
+    font-size: 1.125rem;
     font-family: inherit;
     font-weight: 400;
     &:hover {
@@ -202,10 +202,14 @@
 
   &__error {
     color: red;
+    position: absolute;
+    top: 2rem;
+    left: 0;
   }
 
   &__input {
     display: flex;
     flex-direction: column;
+    position: relative;
   }
 }

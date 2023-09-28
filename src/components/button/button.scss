@@ -3,25 +3,28 @@
 @import "../../styles/_typography";
 
 .button {
-  padding: 0.938em 0.625em;
+  padding: 0.938rem 0.625rem;
   border-radius: 4px;
   text-transform: uppercase;
   width: 100%;
-  min-width: 11.438em;
+  min-width: 11.438rem;
   font-family: inherit;
   font-weight: 400;
   @include smMaxBreakPoint {
-    padding: 0.625em 0.313em;
-    min-width: 9em;
-    &:not(:last-child) {
-      margin-right: 1em;
-    }
+    padding: 0.625rem 0.313rem;
+    min-width: 9rem;
   }
   &:hover {
     cursor: pointer;
   }
   &:not(:last-child) {
-    margin-right: 1.875em;
+    margin-right: 1.875rem;
+    @include smMaxBreakPoint {
+      margin-right: 1rem;
+    }
+    @include xsMaxBreakPoint {
+      margin-right: 0;
+    }
   }
 
   &--primary {

@@ -6,55 +6,59 @@
   width: 100%;
   background-image: url("../icons/lead_img.png");
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 100vh;
+  max-height: 53.12rem;
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0 24em;
+    padding: 12.6rem 24rem;
     width: 100%;
     height: 100%;
+
     @include xxxlMaxBreakPoint {
-      padding: 0 18em;
+      padding: 10.6rem 18rem;
     }
     @include xxlMaxBreakPoint {
-      padding: 0 14em;
+      padding: 10rem 14rem;
     }
     @include xlMaxBreakPoint {
-      padding: 0 12em;
+      padding: 8rem 12rem;
     }
     @include lgMaxBreakPoint {
-      padding: 0 10em;
+      padding: 8rem 10rem;
     }
     @include mdMaxBreakPoint {
-      padding: 0 8em;
+      padding: 8rem;
     }
     @include smMaxBreakPoint {
-      padding: 0 1em;
+      padding: 8rem 1rem;
     }
   }
 
   &__title {
-    margin: 4.16em 0 0 0;
+    margin: 0;
     padding: 0;
-    font-size: 3em;
+    font-size: 3rem;
     text-transform: uppercase;
     font-weight: bold;
     width: 90%;
     &--highlighted {
       color: $primary-color;
     }
+    @include sMaxBreakPoint {
+      font-size: 1.9rem;
+    }
   }
 
   &__content {
-    margin: 5em 0;
+    margin: 5rem 0;
     @include xxlMaxBreakPoint {
-      margin: 3em 0;
+      margin: 3rem 0;
     }
   }
 
@@ -62,23 +66,34 @@
     margin: 0;
     padding: 0;
     font-weight: bold;
-    font-size: 1.25em;
+    font-size: 1.25rem;
+    @include sMaxBreakPoint {
+      font-size: 1rem;
+    }
   }
 
   &__list {
     margin: 0;
     padding: 0;
     list-style: "- ";
-    padding-inline-start: 1.25em;
+    padding-inline-start: 1.25rem;
   }
 
   &__item {
-    font-size: 1.25em;
+    font-size: 1.25rem;
+    @include sMaxBreakPoint {
+      font-size: 1rem;
+    }
   }
 
   &__buttons {
     display: flex;
     justify-content: center;
     align-items: center;
+    @include xsMaxBreakPoint {
+      flex-direction: column;
+      align-self: center;
+      gap: 1rem;
+    }
   }
 }

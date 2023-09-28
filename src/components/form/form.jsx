@@ -29,7 +29,10 @@ export const Form = () => {
         <button
           id="selectbox"
           className={buttonCN}
-          onClick={() => setIsOpen(!open)}
+          onClick={(e) => {
+            e.preventDefault();
+            setIsOpen(!open);
+          }}
           aria-haspopup="true"
           aria-expanded={open ? "true" : "false"}
           aria-label="Open types popup"

@@ -38,7 +38,7 @@ export const Footer = () => {
             <li className="footer__item">
               <a href="mailto:info@ipsum228.com" className="footer__link">
                 <Mail className="footer__icon" />
-                info@ipsum228.com
+                <p className="footer__item-text">info@ipsum228.com</p>
               </a>
             </li>
             <li className="footer__item">
@@ -48,7 +48,7 @@ export const Footer = () => {
                 className="footer__link"
               >
                 <VK className="footer__icon" />
-                Мы вконтакте
+                <p className="footer__item-text">Мы вконтакте</p>
               </a>
             </li>
           </ul>

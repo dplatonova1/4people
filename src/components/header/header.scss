@@ -3,7 +3,9 @@
 
 .nav {
   width: 100vw;
-  height: 6.25em;
+  height: 6.25rem;
+  min-width: 320px;
+  max-width: 1920px;
   display: flex;
   align-items: center;
   background-color: $bg-color-dark-opacity;
@@ -15,36 +17,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 24em;
+    padding: 0 24rem;
     width: 100%;
     position: relative;
 
     @include xxxlMaxBreakPoint {
-      padding: 0 18em;
+      padding: 0 18rem;
     }
     @include xxlMaxBreakPoint {
-      padding: 0 14em;
+      padding: 0 14rem;
     }
     @include xlMaxBreakPoint {
-      padding: 0 12em;
+      padding: 0 12rem;
     }
     @include lgMaxBreakPoint {
-      padding: 0 10em;
+      padding: 0 10rem;
     }
     @include mdMaxBreakPoint {
-      padding: 0 8em;
+      padding: 0 8rem;
     }
     @include smMaxBreakPoint {
-      padding: 0 1em;
+      padding: 0 1rem;
     }
   }
 
   &__logo {
-    height: 1.5em;
+    height: 1.5rem;
     flex-shrink: 0;
     width: max-content;
     @include xlMaxBreakPoint {
-      height: 1em;
+      height: 1rem;
     }
   }
 
@@ -62,14 +64,19 @@
       width: 40vw;
       min-width: max-content;
       background-color: $bg-color-dark-opacity;
-      padding: 2em;
+      padding: 2rem;
       position: absolute;
-      top: 3.98em;
+      top: 3.98rem;
       right: 0;
       transition: $transition-props;
       @include mdMaxBreakPoint {
-        top: 4.3em;
+        top: 4.3rem;
         width: max-content;
+      }
+      @include xsMaxBreakPoint {
+        width: 100vw;
+        min-width: min-content;
+        padding: 1rem;
       }
     }
     @include mdMaxBreakPoint {
@@ -81,18 +88,18 @@
     color: $text-color-light;
     flex-shrink: 0;
     &:not(:last-child) {
-      margin-right: 2.813em;
+      margin-right: 2.813rem;
       @include xlMaxBreakPoint {
-        margin-right: 2em;
+        margin-right: 2rem;
       }
     }
     @include xlMaxBreakPoint {
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
     &--mobile {
       display: flex;
-      font-size: 2em;
-      padding: 1em;
+      font-size: 1.8rem;
+      padding: 1rem;
       width: 100%;
       &:hover {
         background-color: $bg-color-dark-opacity;
@@ -118,7 +125,7 @@
     flex-direction: column;
     gap: 7px;
     border: 3px $text-color-light solid;
-    padding: 1em;
+    padding: 1rem;
     justify-content: center;
     align-items: center;
     & span {
